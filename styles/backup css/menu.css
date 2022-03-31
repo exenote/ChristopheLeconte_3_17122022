@@ -1,3 +1,86 @@
+:root {
+  --color1: #9356dc; /*purple*/
+  --color2: #ff79da; /*pink*/
+  --color3: #99e2d0; /*light green*/
+
+  --color_light_purple: #f5edff;
+  --color_location_text: #353535; /*dark grey*/ 
+  --color_location_background: #eaeaea; /*grey*/
+  --color_cta_background: #f6f6f6; /*light grey*/
+  --color_restaurants_background : #f6f6f6; /*light grey*/
+  --color_footer: #353535; /*dark grey*/
+
+  --color_menu_background: #f6f6f6; /*light grey*/
+
+
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/Roboto-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/Roboto-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/Roboto-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fontawesome-solid';
+  src: url('../fonts/Fontawesome/fa-solid-900.ttf');
+}
+
+@font-face {
+  font-family: 'Fontawesome';
+  src: url('../fonts/Fontawesome/fa-regular-400.ttf');
+}
+
+
+@font-face {
+  font-family: 'Shrikhand';
+  src: url('../fonts/Shrikhand/Shrikhand-Regular.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Roboto";
+  font-weight: normal;
+  font-style: normal;
+}
+
+.header {
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.40);
+  position: relative;
+  line-height: 3.9375rem;
+  text-align: center;
+}
+
 .header__back {
   text-decoration: none;
   color: black;
@@ -8,10 +91,7 @@
   margin-left: 2rem;
   transform: translateY(-50%);
 
-
-
 }
-
 
 .header__back::before {
   font-family: Fontawesome-solid;
@@ -19,6 +99,10 @@
   font-size: 1.2rem;
 }
 
+.header__logo {
+  font-family: 'Shrikhand';
+  font-size: 2rem;
+}
 
 
 .hero {
@@ -334,6 +418,57 @@ Fontawesome-solid
   box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 50%);
 }
 
+
+
+.footer {
+  background-color: var(--color_footer);
+  color: white;
+  padding: 1.5rem calc(20px + (max( (100% - 1440px) * (-1), (100% - 1440px) ) + (100% - 1440px)) / 2 / 2);
+
+}
+
+.footer__logo {
+  display: inline-block;
+  font-family: 'Shrikhand';
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+
+.footer_list {
+  list-style: none;
+}
+
+.footer_listElement {
+
+}
+
+.footer_listElement_link {
+  text-decoration: none;
+  padding-left: 0rem;
+  color: white;
+  line-height: 1.5rem;
+}
+
+.footer_listElement_link:hover {
+  --text-decoration: none;
+}
+
+
+.footer_listElement .footer_listElement_link::before {
+  display: inline-block;
+  width: 1.75rem;
+  font-family: "Fontawesome-solid";
+  vertical-align: baseline;
+}
+
+.footer_listElement:nth-child(1) .footer_listElement_link::before {
+  content: "\f2e7";
+}
+
+.footer_listElement:nth-child(2) .footer_listElement_link::before {
+  content: "\f4c4";
+}
 
 
 
