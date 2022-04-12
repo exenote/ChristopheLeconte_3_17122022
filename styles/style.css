@@ -119,6 +119,58 @@ body {
   content: "\f4c4";
 }
 
+.loader-layout {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  opacity: 0.9;
+  animation: loader-layout 0.01s;
+  animation-delay: 1.75s;
+  animation-fill-mode: both;
+  z-index: 1000;
+}
+
+@keyframes loader-layout {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+.loader-balls span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: var(--color1);
+  margin: 35px 5px;
+}
+
+.loader-balls span:nth-child(1) {
+  animation: bounce 1s ease-in-out infinite;
+}
+
+.loader-balls span:nth-child(2) {
+  animation: bounce 1s ease-in-out 0.33s infinite;
+}
+
+.loader-balls span:nth-child(3) {
+  animation: bounce 1s ease-in-out 0.66s infinite;
+}
+
+@keyframes bounce {
+  0%, 75%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-20px);
+  }
+}
 .location {
   background-color: var(--color_location_background);
   line-height: 3.9375rem;
@@ -153,9 +205,9 @@ body {
 .cta__btn {
   text-decoration: none;
   color: white;
+  transition-duration: 0.25s;
   background-color: #686868;
   background-image: linear-gradient(350deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
-  transition-duration: 0.25s;
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
   border-radius: 1.5rem;
   display: inline-block;
@@ -245,8 +297,6 @@ body {
 .howto__step .libelle::before {
   font-family: "Fontawesome-solid";
   font-size: 19px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   color: grey;
   margin-right: 1rem;
 }
@@ -343,62 +393,11 @@ body {
   font-family: "Fontawesome-solid";
   content: "\f004";
   background: linear-gradient(0deg, #9356dc, #ff79da);
+  background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
-.loader-layout {
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
-  opacity: 0.9;
-  animation: loader-layout 0.01s;
-  animation-delay: 1.75s;
-  animation-fill-mode: both;
-  z-index: 1000;
-}
-
-@keyframes loader-layout {
-  100% {
-    opacity: 0;
-    z-index: -10;
-  }
-}
-.loader-balls span {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border-radius: 100%;
-  background-color: var(--color1);
-  margin: 35px 5px;
-}
-
-.loader-balls span:nth-child(1) {
-  animation: bounce 1s ease-in-out infinite;
-}
-
-.loader-balls span:nth-child(2) {
-  animation: bounce 1s ease-in-out 0.33s infinite;
-}
-
-.loader-balls span:nth-child(3) {
-  animation: bounce 1s ease-in-out 0.66s infinite;
-}
-
-@keyframes bounce {
-  0%, 75%, 100% {
-    transform: translateY(0);
-  }
-  25% {
-    transform: translateY(-20px);
-  }
-}
 .header__back {
   text-decoration: none;
   color: black;
@@ -476,8 +475,9 @@ body {
   font-family: "Fontawesome-solid";
   content: "\f004";
   background: linear-gradient(0deg, #9356dc, #ff79da);
+  background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .submenus {
@@ -529,15 +529,12 @@ body {
   animation: dish_fadeinup 0.7s forwards ease-out;
 }
 .dish:nth-child(3) {
-  --animation: dish_fadeinup 0.7s forwards ease-out;
   animation-delay: 0.3s;
 }
 .dish:nth-child(4) {
-  --animation: dish_fadeinup 0.7s forwards ease-out;
   animation-delay: 0.6s;
 }
 .dish:nth-child(5) {
-  --animation: dish_fadeinup 0.7s forwards ease-out;
   animation-delay: 0.9s;
 }
 .dish__container {
@@ -560,6 +557,7 @@ body {
   align-self: flex-end;
   flex-grow: 0;
   font-weight: bold;
+  margin-left: 1rem;
 }
 .dish:hover .dish__check {
   margin-right: -1rem;
