@@ -272,6 +272,10 @@ body {
   transition: 0.3s;
   background-color: var(--color_light_purple);
 }
+.howto__step:hover .libelle::before {
+  transition: 0.3s;
+  color: var(--color1);
+}
 .howto__step:nth-child(1) .libelle::before {
   content: "\f3cd";
 }

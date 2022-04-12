@@ -185,11 +185,17 @@
     }
 
     &:hover {
-        transition: 0.3s;
-        background-color: var(--color_light_purple);
+      transition: 0.3s;
+      background-color: var(--color_light_purple);
 
-
+      .libelle::before {
+          transition: 0.3s;
+          color: var(--color1);
+      }
     }
+
+
+
 /////////////////////////////////
     &:nth-child(1) {
       .libelle {
